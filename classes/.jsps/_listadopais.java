@@ -130,19 +130,19 @@ public class _listadopais extends com.orionserver.http.OrionHttpJspPage {
     static {
       try {
       text[0] = 
-      "\n".getBytes("Cp1252");
+      "\r\n".getBytes("Cp1252");
       text[1] = 
-      "\n".getBytes("Cp1252");
+      "\r\n".getBytes("Cp1252");
       text[2] = 
-      "\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nHello World\n</title>\n</head>\n<body>\n<h2>\nListado Pais\n</h2>\n\n<table  cellspacing=\"2\" cellpadding=\"1\" border=\"1\" width=\"100%\">\n<tr>\n    <td>Codigo</td>\n    <td>Nombre del País</td>\n</tr>\n\n".getBytes("Cp1252");
+      "\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\r\n<title>\r\nHello World\r\n</title>\r\n</head>\r\n<body>\r\n<h2>\r\nListado Pais\r\n</h2>\r\n\r\n<table  cellspacing=\"2\" cellpadding=\"1\" border=\"1\" width=\"100%\">\r\n<tr>\r\n    <td><b>Codigo</b></td>\r\n    <td><b>Nombre del País</b></td>\r\n</tr>\r\n\r\n".getBytes("Cp1252");
       text[3] = 
-      "\n<tr>\n    <td>".getBytes("Cp1252");
+      "\r\n<tr>\r\n    <td>".getBytes("Cp1252");
       text[4] = 
-      "</td>\n    <td>".getBytes("Cp1252");
+      "</td>\r\n    <td>".getBytes("Cp1252");
       text[5] = 
-      "</td>\n</tr>\n".getBytes("Cp1252");
+      "</td>\r\n</tr>\r\n".getBytes("Cp1252");
       text[6] = 
-      "\n</table>\n\n</body>\n</html>\n".getBytes("Cp1252");
+      "\r\n</table>\r\n\r\n</body>\r\n</html>\r\n".getBytes("Cp1252");
       }
       catch (Throwable th) {
         System.err.println(th);

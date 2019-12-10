@@ -195,29 +195,29 @@ public class _login extends com.orionserver.http.OrionHttpJspPage {
     static {
       try {
       text[0] = 
-      "\n".getBytes("Cp1252");
+      "\r\n".getBytes("Cp1252");
       text[1] = 
-      "\n".getBytes("Cp1252");
+      "\r\n".getBytes("Cp1252");
       text[2] = 
-      "\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nHello World\n</title>\n</head>\n<body>\n<h2>\nTorneo de Tens Grand Slam\n</h2>\nInicio de Sesión\n".getBytes("Cp1252");
+      "\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\r\n<title>\r\nLogin\r\n</title>\r\n</head>\r\n<body>\r\n<h2>\r\nTorneo de Tens Grand Slam\r\n</h2>\r\nInicio de Sesión\r\n".getBytes("Cp1252");
       text[3] = 
-      "\n".getBytes("Cp1252");
+      "\r\n".getBytes("Cp1252");
       text[4] = 
-      "\n<table border=\"0\">\n<tr>\n    <td>".getBytes("Cp1252");
+      "\r\n<table border=\"0\">\r\n<tr>\r\n    <td>".getBytes("Cp1252");
       text[5] = 
-      "</td>\n    <td>".getBytes("Cp1252");
+      "</td>\r\n    <td>".getBytes("Cp1252");
       text[6] = 
-      "</td>\n</tr>\n<tr>\n    <td>".getBytes("Cp1252");
+      "</td>\r\n</tr>\r\n<tr>\r\n    <td>".getBytes("Cp1252");
       text[7] = 
-      "</td>\n    <td>".getBytes("Cp1252");
+      "</td>\r\n    <td>".getBytes("Cp1252");
       text[8] = 
-      "</td>\n</tr>\n</table>\n\n".getBytes("Cp1252");
+      "</td>\r\n</tr>\r\n</table>\r\n\r\n".getBytes("Cp1252");
       text[9] = 
-      "\n".getBytes("Cp1252");
+      "\r\n".getBytes("Cp1252");
       text[10] = 
-      "\n\n<p>\n".getBytes("Cp1252");
+      "\r\n\r\n<p>\r\n".getBytes("Cp1252");
       text[11] = 
-      "</p>\n</body>\n</html>\n".getBytes("Cp1252");
+      "</p>\r\n</body>\r\n</html>\r\n".getBytes("Cp1252");
       }
       catch (Throwable th) {
         System.err.println(th);

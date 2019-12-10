@@ -18,13 +18,6 @@ import javax.naming.NamingException;
 import oracle.jdbc.*;
 import java.util.*;
 
-
-import java.sql.*;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import javax.naming.NamingException;
-import oracle.jdbc.*;
-import java.util.*;
 public class MenuAction extends Action 
 {
   /**
@@ -50,9 +43,6 @@ public class MenuAction extends Action
     return mapping.findForward("listadoentrenador");
     }
     if ( opcion.equals("ALTA JUGADOR") ) {
-      Connection cn = null;
-    ConnectDB conn =new ConnectDB();
-    ResultSet rsConsulta = null;
     try
     {
       cn = conn.conexion;
@@ -84,11 +74,6 @@ public class MenuAction extends Action
     }
     }
     if ( opcion.equals("LISTADO JUGADOR") ) {
-
-    
-        Connection cn = null;
-        ConnectDB conn =new ConnectDB();
-        ResultSet rsConsulta = null;
         try
         {
           cn = conn.conexion;

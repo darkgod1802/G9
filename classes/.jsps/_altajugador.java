@@ -7,7 +7,7 @@ import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
 
-public class _altajugador extends oracle.jsp.runtime.HttpJsp {
+public class _altajugador extends com.orionserver.http.OrionHttpJspPage {
 
   public final String _globalsClassName = null;
 
@@ -30,25 +30,21 @@ public class _altajugador extends oracle.jsp.runtime.HttpJsp {
     PageContext pageContext = JspFactory.getDefaultFactory().getPageContext( this, request, response, null, true, JspWriter.DEFAULT_BUFFER, true);
     // Note: this is not emitted if the session directive == false
     HttpSession session = pageContext.getSession();
-    if (pageContext.getAttribute(OracleJspRuntime.JSP_REQUEST_REDIRECTED, PageContext.REQUEST_SCOPE) != null) {
-      pageContext.setAttribute(OracleJspRuntime.JSP_PAGE_DONTNOTIFY, "true", PageContext.PAGE_SCOPE);
-      JspFactory.getDefaultFactory().releasePageContext(pageContext);
-      return;
-}
     int __jsp_tag_starteval;
     ServletContext application = pageContext.getServletContext();
     JspWriter out = pageContext.getOut();
     _altajugador page = this;
     ServletConfig config = pageContext.getServletConfig();
 
+    com.evermind.server.http.JspCommonExtraWriter __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
     try {
       // global beans
       // end global beans
 
 
-      out.write(__jsp_StaticText.text[0]);
-      out.write(__jsp_StaticText.text[1]);
-      out.write(__jsp_StaticText.text[2]);
+      __ojsp_s_out.write(__jsp_StaticText.text[0]);
+      __ojsp_s_out.write(__jsp_StaticText.text[1]);
+      __ojsp_s_out.write(__jsp_StaticText.text[2]);
       /*@lineinfo:translated-code*//*@lineinfo:15^1*/      {
         org.apache.struts.taglib.html.FormTag __jsp_taghandler_1=(org.apache.struts.taglib.html.FormTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.FormTag.class,"org.apache.struts.taglib.html.FormTag action");
         __jsp_taghandler_1.setParent(null);
@@ -58,7 +54,7 @@ public class _altajugador extends oracle.jsp.runtime.HttpJsp {
         {
           do {
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[3]);
+            __ojsp_s_out.write(__jsp_StaticText.text[3]);
             /*@lineinfo:translated-code*//*@lineinfo:19^9*/            {
               org.apache.struts.taglib.bean.MessageTag __jsp_taghandler_2=(org.apache.struts.taglib.bean.MessageTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.MessageTag.class,"org.apache.struts.taglib.bean.MessageTag key");
               __jsp_taghandler_2.setParent(__jsp_taghandler_1);
@@ -74,7 +70,7 @@ public class _altajugador extends oracle.jsp.runtime.HttpJsp {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_2);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[4]);
+            __ojsp_s_out.write(__jsp_StaticText.text[4]);
             /*@lineinfo:translated-code*//*@lineinfo:20^9*/            {
               org.apache.struts.taglib.html.TextTag __jsp_taghandler_3=(org.apache.struts.taglib.html.TextTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.TextTag.class,"org.apache.struts.taglib.html.TextTag property");
               __jsp_taghandler_3.setParent(__jsp_taghandler_1);
@@ -83,16 +79,18 @@ public class _altajugador extends oracle.jsp.runtime.HttpJsp {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_3,__jsp_tag_starteval,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_3.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_3.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_3);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[5]);
+            __ojsp_s_out.write(__jsp_StaticText.text[5]);
             /*@lineinfo:translated-code*//*@lineinfo:23^9*/            {
               org.apache.struts.taglib.bean.MessageTag __jsp_taghandler_4=(org.apache.struts.taglib.bean.MessageTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.MessageTag.class,"org.apache.struts.taglib.bean.MessageTag key");
               __jsp_taghandler_4.setParent(__jsp_taghandler_1);
@@ -108,7 +106,7 @@ public class _altajugador extends oracle.jsp.runtime.HttpJsp {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_4);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[6]);
+            __ojsp_s_out.write(__jsp_StaticText.text[6]);
             /*@lineinfo:translated-code*//*@lineinfo:24^9*/            {
               org.apache.struts.taglib.html.TextTag __jsp_taghandler_5=(org.apache.struts.taglib.html.TextTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.TextTag.class,"org.apache.struts.taglib.html.TextTag property");
               __jsp_taghandler_5.setParent(__jsp_taghandler_1);
@@ -117,16 +115,18 @@ public class _altajugador extends oracle.jsp.runtime.HttpJsp {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_5,__jsp_tag_starteval,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_5.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_5.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_5);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[7]);
+            __ojsp_s_out.write(__jsp_StaticText.text[7]);
             /*@lineinfo:translated-code*//*@lineinfo:27^9*/            {
               org.apache.struts.taglib.bean.MessageTag __jsp_taghandler_6=(org.apache.struts.taglib.bean.MessageTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.MessageTag.class,"org.apache.struts.taglib.bean.MessageTag key");
               __jsp_taghandler_6.setParent(__jsp_taghandler_1);
@@ -142,7 +142,7 @@ public class _altajugador extends oracle.jsp.runtime.HttpJsp {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_6);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[8]);
+            __ojsp_s_out.write(__jsp_StaticText.text[8]);
             /*@lineinfo:translated-code*//*@lineinfo:28^9*/            {
               org.apache.struts.taglib.html.TextTag __jsp_taghandler_7=(org.apache.struts.taglib.html.TextTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.TextTag.class,"org.apache.struts.taglib.html.TextTag property");
               __jsp_taghandler_7.setParent(__jsp_taghandler_1);
@@ -151,16 +151,18 @@ public class _altajugador extends oracle.jsp.runtime.HttpJsp {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_7,__jsp_tag_starteval,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_7.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_7.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_7);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[9]);
+            __ojsp_s_out.write(__jsp_StaticText.text[9]);
             /*@lineinfo:translated-code*//*@lineinfo:31^9*/            {
               org.apache.struts.taglib.bean.MessageTag __jsp_taghandler_8=(org.apache.struts.taglib.bean.MessageTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.MessageTag.class,"org.apache.struts.taglib.bean.MessageTag key");
               __jsp_taghandler_8.setParent(__jsp_taghandler_1);
@@ -176,7 +178,7 @@ public class _altajugador extends oracle.jsp.runtime.HttpJsp {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_8);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[10]);
+            __ojsp_s_out.write(__jsp_StaticText.text[10]);
             /*@lineinfo:translated-code*//*@lineinfo:32^9*/            {
               org.apache.struts.taglib.html.TextTag __jsp_taghandler_9=(org.apache.struts.taglib.html.TextTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.TextTag.class,"org.apache.struts.taglib.html.TextTag property");
               __jsp_taghandler_9.setParent(__jsp_taghandler_1);
@@ -185,16 +187,18 @@ public class _altajugador extends oracle.jsp.runtime.HttpJsp {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_9,__jsp_tag_starteval,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_9.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_9.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_9);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[11]);
+            __ojsp_s_out.write(__jsp_StaticText.text[11]);
             /*@lineinfo:translated-code*//*@lineinfo:35^9*/            {
               org.apache.struts.taglib.bean.MessageTag __jsp_taghandler_10=(org.apache.struts.taglib.bean.MessageTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.MessageTag.class,"org.apache.struts.taglib.bean.MessageTag key");
               __jsp_taghandler_10.setParent(__jsp_taghandler_1);
@@ -210,7 +214,7 @@ public class _altajugador extends oracle.jsp.runtime.HttpJsp {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_10);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[12]);
+            __ojsp_s_out.write(__jsp_StaticText.text[12]);
             /*@lineinfo:translated-code*//*@lineinfo:36^9*/            {
               org.apache.struts.taglib.html.TextTag __jsp_taghandler_11=(org.apache.struts.taglib.html.TextTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.TextTag.class,"org.apache.struts.taglib.html.TextTag property");
               __jsp_taghandler_11.setParent(__jsp_taghandler_1);
@@ -219,16 +223,18 @@ public class _altajugador extends oracle.jsp.runtime.HttpJsp {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_11,__jsp_tag_starteval,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_11.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_11.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_11);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[13]);
+            __ojsp_s_out.write(__jsp_StaticText.text[13]);
             /*@lineinfo:translated-code*//*@lineinfo:39^9*/            {
               org.apache.struts.taglib.bean.MessageTag __jsp_taghandler_12=(org.apache.struts.taglib.bean.MessageTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.MessageTag.class,"org.apache.struts.taglib.bean.MessageTag key");
               __jsp_taghandler_12.setParent(__jsp_taghandler_1);
@@ -244,7 +250,7 @@ public class _altajugador extends oracle.jsp.runtime.HttpJsp {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_12);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[14]);
+            __ojsp_s_out.write(__jsp_StaticText.text[14]);
             /*@lineinfo:translated-code*//*@lineinfo:40^9*/            {
               org.apache.struts.taglib.html.SelectTag __jsp_taghandler_13=(org.apache.struts.taglib.html.SelectTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SelectTag.class,"org.apache.struts.taglib.html.SelectTag property");
               __jsp_taghandler_13.setParent(__jsp_taghandler_1);
@@ -253,9 +259,10 @@ public class _altajugador extends oracle.jsp.runtime.HttpJsp {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_13,__jsp_tag_starteval,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                   /*@lineinfo:generated-code*/
-                  out.write(__jsp_StaticText.text[15]);
+                  __ojsp_s_out.write(__jsp_StaticText.text[15]);
                   /*@lineinfo:translated-code*//*@lineinfo:41^5*/                  {
                     org.apache.struts.taglib.html.OptionsTag __jsp_taghandler_14=(org.apache.struts.taglib.html.OptionsTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.OptionsTag.class,"org.apache.struts.taglib.html.OptionsTag collection labelProperty property");
                     __jsp_taghandler_14.setParent(__jsp_taghandler_13);
@@ -273,16 +280,17 @@ public class _altajugador extends oracle.jsp.runtime.HttpJsp {
                     OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_14);
                   }
                   /*@lineinfo:generated-code*/
-                  out.write(__jsp_StaticText.text[16]);
+                  __ojsp_s_out.write(__jsp_StaticText.text[16]);
                 /*@lineinfo:translated-code*//*@lineinfo:41^77*/                } while (__jsp_taghandler_13.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_13.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_13);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[17]);
+            __ojsp_s_out.write(__jsp_StaticText.text[17]);
             /*@lineinfo:translated-code*//*@lineinfo:45^9*/            {
               org.apache.struts.taglib.bean.MessageTag __jsp_taghandler_15=(org.apache.struts.taglib.bean.MessageTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.MessageTag.class,"org.apache.struts.taglib.bean.MessageTag key");
               __jsp_taghandler_15.setParent(__jsp_taghandler_1);
@@ -298,7 +306,7 @@ public class _altajugador extends oracle.jsp.runtime.HttpJsp {
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_15);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[18]);
+            __ojsp_s_out.write(__jsp_StaticText.text[18]);
             /*@lineinfo:translated-code*//*@lineinfo:46^9*/            {
               org.apache.struts.taglib.html.SelectTag __jsp_taghandler_16=(org.apache.struts.taglib.html.SelectTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SelectTag.class,"org.apache.struts.taglib.html.SelectTag property");
               __jsp_taghandler_16.setParent(__jsp_taghandler_1);
@@ -307,9 +315,10 @@ public class _altajugador extends oracle.jsp.runtime.HttpJsp {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_16,__jsp_tag_starteval,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                   /*@lineinfo:generated-code*/
-                  out.write(__jsp_StaticText.text[19]);
+                  __ojsp_s_out.write(__jsp_StaticText.text[19]);
                   /*@lineinfo:translated-code*//*@lineinfo:47^5*/                  {
                     org.apache.struts.taglib.html.OptionsTag __jsp_taghandler_17=(org.apache.struts.taglib.html.OptionsTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.OptionsTag.class,"org.apache.struts.taglib.html.OptionsTag collection labelProperty property");
                     __jsp_taghandler_17.setParent(__jsp_taghandler_16);
@@ -327,16 +336,17 @@ public class _altajugador extends oracle.jsp.runtime.HttpJsp {
                     OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_17);
                   }
                   /*@lineinfo:generated-code*/
-                  out.write(__jsp_StaticText.text[20]);
+                  __ojsp_s_out.write(__jsp_StaticText.text[20]);
                 /*@lineinfo:translated-code*//*@lineinfo:47^81*/                } while (__jsp_taghandler_16.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_16.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_16);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[21]);
+            __ojsp_s_out.write(__jsp_StaticText.text[21]);
             /*@lineinfo:translated-code*//*@lineinfo:52^1*/            {
               org.apache.struts.taglib.html.SubmitTag __jsp_taghandler_18=(org.apache.struts.taglib.html.SubmitTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.html.SubmitTag.class,"org.apache.struts.taglib.html.SubmitTag value");
               __jsp_taghandler_18.setParent(__jsp_taghandler_1);
@@ -345,16 +355,18 @@ public class _altajugador extends oracle.jsp.runtime.HttpJsp {
               if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
               {
                 out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_18,__jsp_tag_starteval,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
                 do {
                 } while (__jsp_taghandler_18.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
                 out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
+                __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
               }
               if (__jsp_taghandler_18.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
                 return;
               OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_18);
             }
             /*@lineinfo:generated-code*/
-            out.write(__jsp_StaticText.text[22]);
+            __ojsp_s_out.write(__jsp_StaticText.text[22]);
           /*@lineinfo:translated-code*//*@lineinfo:52^31*/          } while (__jsp_taghandler_1.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
         }
         if (__jsp_taghandler_1.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
@@ -362,7 +374,7 @@ public class _altajugador extends oracle.jsp.runtime.HttpJsp {
         OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_1);
       }
       /*@lineinfo:generated-code*/
-      out.write(__jsp_StaticText.text[23]);
+      __ojsp_s_out.write(__jsp_StaticText.text[23]);
 
 
     }
@@ -381,57 +393,57 @@ public class _altajugador extends oracle.jsp.runtime.HttpJsp {
 
   }
   private static class __jsp_StaticText {
-    private static final char text[][]=new char[24][];
+    private static final byte text[][]=new byte[24][];
     static {
       try {
       text[0] = 
-      "\n".toCharArray();
+      "\r\n".getBytes("Cp1252");
       text[1] = 
-      "\n".toCharArray();
+      "\r\n".getBytes("Cp1252");
       text[2] = 
-      "\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nAlta jugador\n</title>\n</head>\n<body>\n<h2>\nAlta Jugador\n</h2>\n".toCharArray();
+      "\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\r\n<title>\r\nAlta jugador\r\n</title>\r\n</head>\r\n<body>\r\n<h2>\r\nAlta Jugador\r\n</h2>\r\n".getBytes("Cp1252");
       text[3] = 
-      "\n\n<table  cellspacing=\"2\" cellpadding=\"1\" border=\"1\" width=\"100%\">\n<tr>\n    <td>".toCharArray();
+      "\r\n\r\n<table  cellspacing=\"2\" cellpadding=\"1\" border=\"1\" width=\"100%\">\r\n<tr>\r\n    <td>".getBytes("Cp1252");
       text[4] = 
-      "</td>\n    <td>".toCharArray();
+      "</td>\r\n    <td>".getBytes("Cp1252");
       text[5] = 
-      "</td>\n</tr>\n<tr>\n    <td>".toCharArray();
+      "</td>\r\n</tr>\r\n<tr>\r\n    <td>".getBytes("Cp1252");
       text[6] = 
-      "</td>\n    <td>".toCharArray();
+      "</td>\r\n    <td>".getBytes("Cp1252");
       text[7] = 
-      "</td>\n</tr>\n<tr>\n    <td>".toCharArray();
+      "</td>\r\n</tr>\r\n<tr>\r\n    <td>".getBytes("Cp1252");
       text[8] = 
-      "</td>\n    <td>".toCharArray();
+      "</td>\r\n    <td>".getBytes("Cp1252");
       text[9] = 
-      "</td>\n</tr>\n<tr>\n    <td>".toCharArray();
+      "</td>\r\n</tr>\r\n<tr>\r\n    <td>".getBytes("Cp1252");
       text[10] = 
-      "</td>\n    <td>".toCharArray();
+      "</td>\r\n    <td>".getBytes("Cp1252");
       text[11] = 
-      "</td>\n</tr>\n<tr>\n    <td>".toCharArray();
+      "</td>\r\n</tr>\r\n<tr>\r\n    <td>".getBytes("Cp1252");
       text[12] = 
-      "</td>\n    <td>".toCharArray();
+      "</td>\r\n    <td>".getBytes("Cp1252");
       text[13] = 
-      "</td>\n</tr>\n<tr>\n    <td>".toCharArray();
+      "</td>\r\n</tr>\r\n<tr>\r\n    <td>".getBytes("Cp1252");
       text[14] = 
-      "</td>\n    <td>".toCharArray();
+      "</td>\r\n    <td>".getBytes("Cp1252");
       text[15] = 
-      "\n    ".toCharArray();
+      "\r\n    ".getBytes("Cp1252");
       text[16] = 
-      "\n    ".toCharArray();
+      "\r\n    ".getBytes("Cp1252");
       text[17] = 
-      "</td>\n</tr>\n<tr>\n    <td>".toCharArray();
+      "</td>\r\n</tr>\r\n<tr>\r\n    <td>".getBytes("Cp1252");
       text[18] = 
-      "</td>\n    <td>".toCharArray();
+      "</td>\r\n    <td>".getBytes("Cp1252");
       text[19] = 
-      "\n    ".toCharArray();
+      "\r\n    ".getBytes("Cp1252");
       text[20] = 
-      "\n    ".toCharArray();
+      "\r\n    ".getBytes("Cp1252");
       text[21] = 
-      "</td>\n</tr>\n</table>\n\n".toCharArray();
+      "</td>\r\n</tr>\r\n</table>\r\n\r\n".getBytes("Cp1252");
       text[22] = 
-      "\n\n\n\n".toCharArray();
+      "\r\n\r\n\r\n\r\n".getBytes("Cp1252");
       text[23] = 
-      "\n\n</body>\n</html>\n\n\n\n\n".toCharArray();
+      "\r\n\r\n</body>\r\n</html>\r\n\r\n\r\n\r\n\r\n".getBytes("Cp1252");
       }
       catch (Throwable th) {
         System.err.println(th);
