@@ -10,6 +10,14 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
+import java.sql.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.naming.NamingException;
+import oracle.jdbc.*;
+import java.util.*;
+
 public class AltaJugadorAction extends Action 
 {
   /**
@@ -21,6 +29,41 @@ public class AltaJugadorAction extends Action
    */
   public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
   {
-    return mapping.findForward("altajugador");
+    AltaJugadorForm cc = (AltaJugadorForm) form;
+    String jugid = cc.getJugid();
+    String jugnombre = cc.getJugnombre();
+    String jugedad = cc.getJugedad();
+    String jugcontacto = cc.getJugcontacto();
+    String jugsexo = cc.getJugsexo();
+    String jugpais = cc.getJugpais();
+    String jugpaisdos = cc.getJugpaisdos();
+
+    
+    Connection cn = null;
+    ConnectDB conn =new ConnectDB();
+    ResultSet rsConsulta = null;
+
+       try
+       {
+         cn = conn.conexion;
+         String cadena = "insert into g9_jugador values ("+jugid+",'"+jugnombre+"','"+jugedad+"','"+jugcontacto+"','"+jugsexo+"','"+jugpais+"','"+jugpaisdos+"')";
+         System.out.println(cadena);
+         int a = conn.InsertaDatos(cadena);
+          
+         return mapping.findForward("altajugador");
+	      }
+	
+        catch(Exception e)
+       {
+          e.printStackTrace();
+          return (mapping.findForward("error"));
+       }
+       
+    finally
+    {
+      conn.closeConnection();	
+    }
+    
+
   }
 }

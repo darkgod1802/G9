@@ -22,7 +22,7 @@
          <URL path="src/mypackage4/ConnectDB.java"/>
       </Item>
       <Item class="oracle.jdeveloper.model.JspSourceNode">
-         <URL path="public_html/login.jsp" id="0"/>
+         <URL path="public_html/login.jsp"/>
          <encoding>windows-1252</encoding>
       </Item>
       <Item class="oracle.jdeveloper.model.JavaSourceNode">
@@ -104,6 +104,12 @@
       </Item>
       <Item class="oracle.jdeveloper.model.JavaSourceNode">
          <URL path="src/mypackage4/MenuAction.java"/>
+      </Item>
+      <Item class="oracle.jdeveloper.model.JavaSourceNode">
+         <URL path="src/mypackage4/ClasePais.java"/>
+      </Item>
+      <Item class="oracle.jdeveloper.model.JavaSourceNode">
+         <URL path="src/mypackage4/ClaseJugadorItem.java"/>
       </Item>
    </listOfChildren>
    <ownerMap/>
@@ -205,7 +211,7 @@
                         <programArguments class="java.lang.String"/>
                         <runActiveFile>true</runActiveFile>
                         <runDirectoryURL/>
-                        <targetURL idref="0"/>
+                        <targetURL path="public_html/login.jsp"/>
                         <useProxy>true</useProxy>
                      </Value>
                   </Item>
