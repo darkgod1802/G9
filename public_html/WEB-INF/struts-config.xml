@@ -9,6 +9,7 @@
     <form-bean name="ListadoEntrenadorForm" type="mypackage4.ListadoEntrenadorForm"/>
     <form-bean name="AltaJugadorForm" type="mypackage4.AltaJugadorForm"/>
     <form-bean name="ListadoJugadorForm" type="mypackage4.ListadoJugadorForm"/>
+    <form-bean name="MenuForm" type="mypackage4.MenuForm"/>
   </form-beans>
   <global-forwards>
     <forward name="menu" path="/menu.jsp"/>
@@ -28,6 +29,7 @@
     <action path="/listadoentrenador" type="mypackage4.ListadoEntrenadorAction" name="ListadoEntrenadorForm" input="/listadoentrenador.jsp" scope="request"/>
     <action path="/altajugador" type="mypackage4.AltaJugadorAction" name="AltaJugadorForm" input="/altajugador.jsp" scope="request"/>
     <action path="/listadojugador" type="mypackage4.ListadoJugadorAction" name="ListadoJugadorForm" input="/listadojugador.jsp" scope="request"/>
+    <action path="/menu" type="mypackage4.MenuAction" name="MenuForm" scope="request"/>
   </action-mappings>
   <message-resources parameter="mypackage4.ApplicationResources"/>
 </struts-config>

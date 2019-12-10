@@ -15,32 +15,15 @@ Bienvenido <%=session.getAttribute("usuario")%>
 <h3>Escoja una de las siguientes opciones:</h3>
 
 
-<html:form action="/altapais">
-  <html:submit value="ALTA PAIS"/>
-</html:form>
-
-<html:form action="/listadopais">
-  <html:submit  value="LISTADO PAIS"/>
-</html:form>
 
 
-<html:form action="/altaentrenador">
-  <html:submit value="ALTA ENTRENADOR" />
-</html:form>
-
-
-<html:form action="/listadoentrenador">
-  <html:submit value="LISTADO ENTRENADOR" />
-</html:form>
-
-
-<html:form action="/altajugador">
-  <html:submit value="ALTA JUGADOR" />
-</html:form>
-
-
-<html:form action="/listadojugador">
-  <html:submit value="LISTADO JUGADOR" />
+<html:form action="/menu">
+  <html:submit property="opcion" value="ALTA ENTRENADOR" />
+  <html:submit property="opcion" value="LISTADO ENTRENADOR" />
+  <html:submit property="opcion" value="ALTA JUGADOR" />
+  <html:submit property="opcion" value="LISTADO JUGADOR" />
+  <html:submit property="opcion" value="ALTA PAIS"/>
+  <html:submit property="opcion" value="LISTADO PAIS"/>
 </html:form>
 
 

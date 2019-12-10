@@ -7,7 +7,7 @@ import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
 
-public class _altapais extends com.orionserver.http.OrionHttpJspPage {
+public class _altapais extends oracle.jsp.runtime.HttpJsp {
 
   public final String _globalsClassName = null;
 
@@ -30,22 +30,26 @@ public class _altapais extends com.orionserver.http.OrionHttpJspPage {
     PageContext pageContext = JspFactory.getDefaultFactory().getPageContext( this, request, response, null, true, JspWriter.DEFAULT_BUFFER, true);
     // Note: this is not emitted if the session directive == false
     HttpSession session = pageContext.getSession();
+    if (pageContext.getAttribute(OracleJspRuntime.JSP_REQUEST_REDIRECTED, PageContext.REQUEST_SCOPE) != null) {
+      pageContext.setAttribute(OracleJspRuntime.JSP_PAGE_DONTNOTIFY, "true", PageContext.PAGE_SCOPE);
+      JspFactory.getDefaultFactory().releasePageContext(pageContext);
+      return;
+}
     int __jsp_tag_starteval;
     ServletContext application = pageContext.getServletContext();
     JspWriter out = pageContext.getOut();
     _altapais page = this;
     ServletConfig config = pageContext.getServletConfig();
 
-    com.evermind.server.http.JspCommonExtraWriter __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
     try {
       // global beans
       // end global beans
 
 
-      __ojsp_s_out.write(__jsp_StaticText.text[0]);
+      out.write(__jsp_StaticText.text[0]);
       /*@lineinfo:user-code*//*@lineinfo:14^1*/      out.print( new java.util.Date() );
       /*@lineinfo:generated-code*/
-      __ojsp_s_out.write(__jsp_StaticText.text[1]);
+      out.write(__jsp_StaticText.text[1]);
 
 
     }
@@ -64,13 +68,13 @@ public class _altapais extends com.orionserver.http.OrionHttpJspPage {
 
   }
   private static class __jsp_StaticText {
-    private static final byte text[][]=new byte[2][];
+    private static final char text[][]=new char[2][];
     static {
       try {
       text[0] = 
-      "\r\n<html>\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\r\n<title>\r\nHello World\r\n</title>\r\n</head>\r\n<body>\r\n<h2>\r\nAlta pais\r\n</h2>\r\n<p>\r\n".getBytes("Cp1252");
+      "\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nHello World\n</title>\n</head>\n<body>\n<h2>\nAlta pais\n</h2>\n<p>\n".toCharArray();
       text[1] = 
-      "</p>\r\n</body>\r\n</html>\r\n".getBytes("Cp1252");
+      "</p>\n</body>\n</html>\n".toCharArray();
       }
       catch (Throwable th) {
         System.err.println(th);
