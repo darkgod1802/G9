@@ -7,7 +7,7 @@ import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
 
-public class _listadopais extends oracle.jsp.runtime.HttpJsp {
+public class _listadopais extends com.orionserver.http.OrionHttpJspPage {
 
   public final String _globalsClassName = null;
 
@@ -30,26 +30,84 @@ public class _listadopais extends oracle.jsp.runtime.HttpJsp {
     PageContext pageContext = JspFactory.getDefaultFactory().getPageContext( this, request, response, null, true, JspWriter.DEFAULT_BUFFER, true);
     // Note: this is not emitted if the session directive == false
     HttpSession session = pageContext.getSession();
-    if (pageContext.getAttribute(OracleJspRuntime.JSP_REQUEST_REDIRECTED, PageContext.REQUEST_SCOPE) != null) {
-      pageContext.setAttribute(OracleJspRuntime.JSP_PAGE_DONTNOTIFY, "true", PageContext.PAGE_SCOPE);
-      JspFactory.getDefaultFactory().releasePageContext(pageContext);
-      return;
-}
     int __jsp_tag_starteval;
     ServletContext application = pageContext.getServletContext();
     JspWriter out = pageContext.getOut();
     _listadopais page = this;
     ServletConfig config = pageContext.getServletConfig();
 
+    com.evermind.server.http.JspCommonExtraWriter __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
     try {
       // global beans
       // end global beans
 
 
-      out.write(__jsp_StaticText.text[0]);
-      /*@lineinfo:user-code*//*@lineinfo:14^1*/      out.print( new java.util.Date() );
+      __ojsp_s_out.write(__jsp_StaticText.text[0]);
+      __ojsp_s_out.write(__jsp_StaticText.text[1]);
+      __ojsp_s_out.write(__jsp_StaticText.text[2]);
+      /*@lineinfo:translated-code*//*@lineinfo:22^1*/      {
+        org.apache.struts.taglib.logic.IterateTag __jsp_taghandler_1=(org.apache.struts.taglib.logic.IterateTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.logic.IterateTag.class,"org.apache.struts.taglib.logic.IterateTag id indexId name property");
+        __jsp_taghandler_1.setParent(null);
+        __jsp_taghandler_1.setId("tabla");
+        __jsp_taghandler_1.setIndexId("index");
+        __jsp_taghandler_1.setName("listaPais");
+        __jsp_taghandler_1.setProperty("tabla");
+        java.lang.Object tabla = null;
+        java.lang.Integer index = null;
+        __jsp_tag_starteval=__jsp_taghandler_1.doStartTag();
+        if (OracleJspRuntime.checkStartBodyTagEval(__jsp_tag_starteval))
+        {
+          out=OracleJspRuntime.pushBodyIfNeeded(pageContext,__jsp_taghandler_1,__jsp_tag_starteval,out);
+          __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
+          do {
+            tabla = (java.lang.Object) pageContext.findAttribute("tabla");
+            index = (java.lang.Integer) pageContext.findAttribute("index");
+            /*@lineinfo:generated-code*/
+            __ojsp_s_out.write(__jsp_StaticText.text[3]);
+            /*@lineinfo:translated-code*//*@lineinfo:24^9*/            {
+              org.apache.struts.taglib.bean.WriteTag __jsp_taghandler_2=(org.apache.struts.taglib.bean.WriteTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.WriteTag.class,"org.apache.struts.taglib.bean.WriteTag name property");
+              __jsp_taghandler_2.setParent(__jsp_taghandler_1);
+              __jsp_taghandler_2.setName("tabla");
+              __jsp_taghandler_2.setProperty("codigo");
+              __jsp_tag_starteval=__jsp_taghandler_2.doStartTag();
+              if (OracleJspRuntime.checkStartTagEval(__jsp_tag_starteval))
+              {
+                do {
+                } while (__jsp_taghandler_2.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+              }
+              if (__jsp_taghandler_2.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
+                return;
+              OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_2);
+            }
+            /*@lineinfo:generated-code*/
+            __ojsp_s_out.write(__jsp_StaticText.text[4]);
+            /*@lineinfo:translated-code*//*@lineinfo:25^9*/            {
+              org.apache.struts.taglib.bean.WriteTag __jsp_taghandler_3=(org.apache.struts.taglib.bean.WriteTag)OracleJspRuntime.getTagHandler(pageContext,org.apache.struts.taglib.bean.WriteTag.class,"org.apache.struts.taglib.bean.WriteTag name property");
+              __jsp_taghandler_3.setParent(__jsp_taghandler_1);
+              __jsp_taghandler_3.setName("tabla");
+              __jsp_taghandler_3.setProperty("nombre");
+              __jsp_tag_starteval=__jsp_taghandler_3.doStartTag();
+              if (OracleJspRuntime.checkStartTagEval(__jsp_tag_starteval))
+              {
+                do {
+                } while (__jsp_taghandler_3.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+              }
+              if (__jsp_taghandler_3.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
+                return;
+              OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_3);
+            }
+            /*@lineinfo:generated-code*/
+            __ojsp_s_out.write(__jsp_StaticText.text[5]);
+          /*@lineinfo:translated-code*//*@lineinfo:25^54*/          } while (__jsp_taghandler_1.doAfterBody()==javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN);
+          out=OracleJspRuntime.popBodyIfNeeded(pageContext,out);
+          __ojsp_s_out = (com.evermind.server.http.JspCommonExtraWriter) out;
+        }
+        if (__jsp_taghandler_1.doEndTag()==javax.servlet.jsp.tagext.Tag.SKIP_PAGE)
+          return;
+        OracleJspRuntime.releaseTagHandler(pageContext,__jsp_taghandler_1);
+      }
       /*@lineinfo:generated-code*/
-      out.write(__jsp_StaticText.text[1]);
+      __ojsp_s_out.write(__jsp_StaticText.text[6]);
 
 
     }
@@ -62,19 +120,29 @@ public class _listadopais extends oracle.jsp.runtime.HttpJsp {
       pageContext.handlePageException( e);
     }
     finally {
-      OracleJspRuntime.extraHandlePCFinally(pageContext,false);
+      OracleJspRuntime.extraHandlePCFinally(pageContext,true);
       JspFactory.getDefaultFactory().releasePageContext(pageContext);
     }
 
   }
   private static class __jsp_StaticText {
-    private static final char text[][]=new char[2][];
+    private static final byte text[][]=new byte[7][];
     static {
       try {
       text[0] = 
-      "\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nHello World\n</title>\n</head>\n<body>\n<h2>\nListado Pais\n</h2>\n<p>\n".toCharArray();
+      "\n".getBytes("Cp1252");
       text[1] = 
-      "</p>\n</body>\n</html>\n".toCharArray();
+      "\n".getBytes("Cp1252");
+      text[2] = 
+      "\n<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<title>\nHello World\n</title>\n</head>\n<body>\n<h2>\nListado Pais\n</h2>\n\n<table  cellspacing=\"2\" cellpadding=\"1\" border=\"1\" width=\"100%\">\n<tr>\n    <td>Codigo</td>\n    <td>Nombre del País</td>\n</tr>\n\n".getBytes("Cp1252");
+      text[3] = 
+      "\n<tr>\n    <td>".getBytes("Cp1252");
+      text[4] = 
+      "</td>\n    <td>".getBytes("Cp1252");
+      text[5] = 
+      "</td>\n</tr>\n".getBytes("Cp1252");
+      text[6] = 
+      "\n</table>\n\n</body>\n</html>\n".getBytes("Cp1252");
       }
       catch (Throwable th) {
         System.err.println(th);
