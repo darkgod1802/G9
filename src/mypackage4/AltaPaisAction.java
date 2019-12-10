@@ -10,6 +10,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import java.sql.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.naming.NamingException;
+import oracle.jdbc.*;
+import java.util.*;
+
 public class AltaPaisAction extends Action 
 {
   /**
@@ -21,6 +28,29 @@ public class AltaPaisAction extends Action
    */
   public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
   {
-    return mapping.findForward("altapais");
+    System.out.println("Validando pais...");
+
+    AltaPaisForm apf = (AltaPaisForm) form;
+    String codigo = apf.getCodigo();
+    String nombre = apf.getNombre();
+
+    Connection cn = null;
+    ConnectDB conn =new ConnectDB();
+    ResultSet rsConsulta = null;
+    
+    try{
+      cn = conn.conexion;
+      String cadena="insert into G9_PAIS (ID, NOMBRE) VALUES ('"+codigo+"', '"+nombre+"')";
+      System.out.println(cadena);
+      int a = conn.InsertaDatos(cadena);
+      return mapping.findForward("menu");
+    }
+    catch(Exception e){
+      e.printStackTrace();
+      return (mapping.findForward("error"));
+    }
+    finally{
+      conn.closeConnection();	
+    }   
   }
 }

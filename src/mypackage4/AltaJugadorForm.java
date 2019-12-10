@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 
 public class AltaJugadorForm extends ActionForm 
 {
+
   /**
    * Reset all properties to their default values.
    * @param mapping The ActionMapping used to select this instance.
@@ -27,4 +28,5 @@ public class AltaJugadorForm extends ActionForm
   {
     return super.validate(mapping, request);
   }
+
 }

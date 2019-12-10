@@ -9,6 +9,14 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
+
+import java.sql.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.naming.NamingException;
+import oracle.jdbc.*;
+import java.util.*;
 
 public class MenuAction extends Action 
 {
@@ -23,6 +31,10 @@ public class MenuAction extends Action
   {
     MenuForm menu = (MenuForm) form;
     String opcion = menu.getOpcion();
+ 
+    Connection cn = null;
+    ConnectDB conn =new ConnectDB();
+    ResultSet rsConsulta = null;
 
     if ( opcion.equals("ALTA ENTRENADOR") ) {
     return mapping.findForward("altaentrenador");
@@ -40,7 +52,31 @@ public class MenuAction extends Action
     return mapping.findForward("altapais");
     }
     if ( opcion.equals("LISTADO PAIS") ) {
-    return mapping.findForward("listadopais");
+
+      try {
+      String cadena = "select id, nombre from G9_PAIS";
+      rsConsulta = conn.getData(cadena);
+      ArrayList items = new ArrayList();
+      while (rsConsulta.next())
+      {
+        Pais pais = new Pais();
+        pais.setCodigo(rsConsulta.getString("id"));
+        pais.setNombre(rsConsulta.getString("nombre"));
+        items.add(pais);
+      }
+      ListadoPaisForm f = new ListadoPaisForm();
+      f.setTabla(items);
+      request.getSession().setAttribute("listaPais",f);
+      
+      return mapping.findForward("listadopais");
+      } catch (Exception e)
+      {
+        e.printStackTrace();
+      return (mapping.findForward("error"));
+      }
+      finally {
+        conn.closeConnection();	
+      }   
     }
     return mapping.findForward("");
   }

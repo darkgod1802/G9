@@ -11,7 +11,7 @@ public class ConnectDB
   Statement statement;
 
   public ConnectDB(){
-    final String sourceURL = "jdbc:oracle:thin:@201.131.41.50:1521:XE";
+    final String sourceURL = "jdbc:oracle:thin:@192.168.0.160:1521:XE";
     final String UserName = "anavia";
     final String Password = "taller2019";
     try {
