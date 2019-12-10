@@ -105,6 +105,15 @@
       <Item class="oracle.jdeveloper.model.JavaSourceNode">
          <URL path="src/mypackage4/MenuAction.java"/>
       </Item>
+      <Item class="oracle.jdeveloper.model.JavaSourceNode">
+         <URL path="src/mypackage4/ClasePais.java"/>
+      </Item>
+      <Item class="oracle.jdeveloper.model.JavaSourceNode">
+         <URL path="src/mypackage4/EntrenadorItem.java"/>
+      </Item>
+      <Item class="oracle.ide.model.DeployableTextNode">
+         <URL path="public_html/jscript/alta.js"/>
+      </Item>
    </listOfChildren>
    <ownerMap/>
    <projectDocPath>

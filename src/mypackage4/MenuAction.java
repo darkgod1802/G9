@@ -9,6 +9,12 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.sql.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.naming.NamingException;
+import oracle.jdbc.*;
+import java.util.*;
 
 public class MenuAction extends Action 
 {
@@ -25,10 +31,77 @@ public class MenuAction extends Action
     String opcion = menu.getOpcion();
 
     if ( opcion.equals("ALTA ENTRENADOR") ) {
-    return mapping.findForward("altaentrenador");
+    Connection cn = null;
+    ConnectDB conn =new ConnectDB();
+    ResultSet rsConsulta = null;
+    try
+    {
+      cn = conn.conexion;
+      String cadena = "select * from g9_pais order by 1";
+      rsConsulta = conn.getData(cadena);
+      ArrayList items = new ArrayList();
+      ClasePais item1 = new ClasePais();
+      item1.setId("0");
+      item1.setNombre("-----");
+      items.add(item1);
+      while (rsConsulta.next())
+      {
+        ClasePais item = new ClasePais();
+        item.setId(rsConsulta.getString("id"));
+        item.setNombre(rsConsulta.getString("nombre"));
+        items.add(item);
+        System.out.println("Paso ..");
+      }  
+      request.getSession().setAttribute("ayuda1",items);
+      request.getSession().setAttribute("ayuda2",items);
+
+        return mapping.findForward("altaentrenador");
+    }
+	
+    catch(Exception e)
+    {
+      e.printStackTrace();
+      return (mapping.findForward("error"));
+    }
+    finally
+    {
+      conn.closeConnection();	
+    }
     }
     if ( opcion.equals("LISTADO ENTRENADOR") ) {
-    return mapping.findForward("listadoentrenador");
+    Connection cn = null;
+      ConnectDB conn =new ConnectDB();
+      ResultSet rsConsulta = null;
+      try
+      {
+        cn = conn.conexion;
+        String cadena ="select * from g9_entrenador";
+        System.out.print(cadena);
+        rsConsulta = conn.getData(cadena);
+        ArrayList items = new ArrayList();
+        while (rsConsulta.next())
+        {
+          EntrenadorItem item = new EntrenadorItem();
+          item.setId(rsConsulta.getString("id"));
+          item.setNombre(rsConsulta.getString("nombre"));
+          item.setPais1(rsConsulta.getString("pais_2_origen"));
+          item.setPais2(rsConsulta.getString("pais_origen"));
+          items.add(item);
+        }
+      ListadoEntrenadorForm f = new ListadoEntrenadorForm ();	   
+      f.setTabla(items);
+      request.getSession().setAttribute("mmm",f);
+      return (mapping.findForward("listadoentrenador"));
+      }
+      catch(Exception e)
+      {
+        e.printStackTrace();
+        return (mapping.findForward("error"));
+      }
+      finally
+      {
+        conn.closeConnection();	
+      }
     }
     if ( opcion.equals("ALTA JUGADOR") ) {
     return mapping.findForward("altajugador");
