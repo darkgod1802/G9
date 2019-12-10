@@ -1,0 +1,33 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="LoginForm" type="mypackage4.LoginForm"/>
+    <form-bean name="AltaPaisForm" type="mypackage4.AltaPaisForm"/>
+    <form-bean name="ListadoPaisForm" type="mypackage4.ListadoPaisForm"/>
+    <form-bean name="AltaEntrenadorForm" type="mypackage4.AltaEntrenadorForm"/>
+    <form-bean name="ListadoEntrenadorForm" type="mypackage4.ListadoEntrenadorForm"/>
+    <form-bean name="AltaJugadorForm" type="mypackage4.AltaJugadorForm"/>
+    <form-bean name="ListadoJugadorForm" type="mypackage4.ListadoJugadorForm"/>
+  </form-beans>
+  <global-forwards>
+    <forward name="menu" path="/menu.jsp"/>
+    <forward name="error" path="/error.jsp"/>
+    <forward name="altapais" path="/altapais.jsp"/>
+    <forward name="listadopais" path="/listadopais.jsp"/>
+    <forward name="altaentrenador" path="/altaentrenador.jsp"/>
+    <forward name="listadoentrenador" path="/listadoentrenador.jsp"/>
+    <forward name="altajugador" path="/altajugador.jsp"/>
+    <forward name="listadojugador" path="/listadojugador.jsp"/>
+  </global-forwards>
+  <action-mappings>
+    <action path="/login" type="mypackage4.LoginAction" name="LoginForm" input="/login.jsp" scope="request"/>
+    <action path="/altapais" type="mypackage4.AltaPaisAction" name="AltaPaisForm" input="/altapais.jsp" scope="request"/>
+    <action path="/listadopais" type="mypackage4.ListadoPaisAction" name="ListadoPaisForm" input="/listadopais.jsp" scope="request"/>
+    <action path="/altaentrenador" type="mypackage4.AltaEntrenadorAction" name="AltaEntrenadorForm" input="/altaentrenador.jsp" scope="request"/>
+    <action path="/listadoentrenador" type="mypackage4.ListadoEntrenadorAction" name="ListadoEntrenadorForm" input="/listadoentrenador.jsp" scope="request"/>
+    <action path="/altajugador" type="mypackage4.AltaJugadorAction" name="AltaJugadorForm" input="/altajugador.jsp" scope="request"/>
+    <action path="/listadojugador" type="mypackage4.ListadoJugadorAction" name="ListadoJugadorForm" input="/listadojugador.jsp" scope="request"/>
+  </action-mappings>
+  <message-resources parameter="mypackage4.ApplicationResources"/>
+</struts-config>
