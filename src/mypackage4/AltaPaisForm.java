@@ -7,6 +7,9 @@ import javax.servlet.http.HttpServletRequest;
 
 public class AltaPaisForm extends ActionForm 
 {
+  String codigo;
+  String nombre;
+
   /**
    * Reset all properties to their default values.
    * @param mapping The ActionMapping used to select this instance.
@@ -25,6 +28,31 @@ public class AltaPaisForm extends ActionForm
    */
   public ActionErrors validate(ActionMapping mapping, HttpServletRequest request)
   {
-    return super.validate(mapping, request);
+    ActionErrors errors = new ActionErrors();
+    if ((codigo == null) || (codigo.length() < 1)) 
+      errors.add("codigo", new ActionError("error.codigo.pais.requerido"));
+    if ((nombre == null) || (nombre.length() < 1)) 
+      errors.add("nombre", new ActionError("error.nombre.pais.requerido"));
+    return errors;  
+  }
+
+  public String getCodigo()
+  {
+    return codigo;
+  }
+
+  public void setCodigo(String newCodigo)
+  {
+    codigo = newCodigo;
+  }
+
+  public String getNombre()
+  {
+    return nombre;
+  }
+
+  public void setNombre(String newNombre)
+  {
+    nombre = newNombre;
   }
 }
